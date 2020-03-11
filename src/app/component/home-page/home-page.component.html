@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+  <h3 class="w3-bar-item">Primax Employee Uikit</h3>
+  <a [routerLink]="['department/create']" routerLinkActive="active"
+     class="list-group-item">
+    <i class="fas fa-pills fa-fw"></i> <span class="hidden-sm-down">&nbsp;Department</span></a>
+  <a [routerLink]="['/employee']" routerLinkActive="active"
+     class="list-group-item">
+    <i class="fas fa-pills fa-fw"></i> <span class="hidden-sm-down">&nbsp;Employee</span></a>
+
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:25%">
+
+<router-outlet></router-outlet>
+
+</div>
+
+</body>
+</html>

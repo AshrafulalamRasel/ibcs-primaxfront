@@ -1,0 +1,53 @@
+<div class="container h-100 ">
+  <div class="row align-items-center h-100">
+    <div class="col-6 mx-auto">
+      <div class="ibox">
+        <div class="ibox-head">
+          <div class="ibox-title" >Create Employee</div>
+        </div>
+        <div></div>
+        <div class="ibox-body">
+          <form (ngSubmit)="onSubmit()" [formGroup]="signUpForm">
+
+            <div class="form-group">
+              <label for="code">Code</label>
+              <input [ngClass]="{ 'is-invalid': submitted && f.code.errors }" class="form-control"
+                     formControlName="code" id="code"
+                     type="text"/>
+              <div *ngIf="submitted && f.code.errors" class="invalid-feedback">
+                <div *ngIf="f.code.errors.required">Code is required</div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="userName">DepartmentName</label>
+              <input [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" class="form-control"
+                     formControlName="userName" id="userName"
+                     type="text"/>
+              <div *ngIf="submitted && f.userName.errors" class="invalid-feedback">
+                <div *ngIf="f.userName.errors.required">DepartmentName is required</div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label for="active">Active</label>
+              <input [ngClass]="{ 'is-invalid': submitted && f.active.errors }" class="form-control"
+                     formControlName="active" id="active"
+                     type="text"/>
+              <div *ngIf="submitted && f.active.errors" class="invalid-feedback">
+                <div *ngIf="f.active.errors.required">Active is required</div>
+              </div>
+            </div>
+
+
+
+            <div class="form-group text-right">
+              <button class="btn btn-primary">Create</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

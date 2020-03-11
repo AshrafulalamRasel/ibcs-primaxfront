@@ -1,0 +1,54 @@
+<div class="container">
+  <form name="form" [formGroup]="form">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Active</th>
+        <th>Employee Name </th>
+        <th>Edit Page</th>
+      </tr>
+      </thead>
+      <tbody>
+
+      <tr *ngFor="let departmentData of departmentLists">
+
+        <td>{{ departmentData.code }}</td>
+        <td>{{ departmentData.name }}</td>
+        <td>{{ departmentData.active }}</td>
+
+        <td>
+          <table class="table table-nostriped">
+            <tr *ngFor="let employeeInfo of employeeListFromDeprtment">
+              <td>{{ employeeInfo.employeeName }}</td>
+              <td>{{ employeeInfo.employeeJoiningDate }}</td>
+            </tr>
+
+          </table>
+        </td>
+        <td>
+          <table class="table table-nostriped">
+            <tr *ngFor="let employeeInfo of employeeListFromDeprtment">
+              <td>
+
+                <button (click)="editEmployeeList(id)" class="btn btn-outline-danger mt-1"
+                        type="button">Edit
+                </button>
+
+              </td>
+            </tr>
+
+          </table>
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+    <div class="form-group text-right">
+      <button (click)="onPrint()" class="btn btn-primary mr-2">Print</button>
+      <button (click)="getAllEmployee()" class="btn btn-primary">Show All Employee</button>
+    </div>
+
+  </form>
+</div>
