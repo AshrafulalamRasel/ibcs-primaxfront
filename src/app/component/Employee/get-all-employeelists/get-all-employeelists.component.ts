@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {CreateDepartment} from "../../../Services/create-department";
 import {CreateEmployee} from "../../../Services/create-employee";
 import {ActivatedRoute, Router} from "@angular/router";
 
@@ -45,6 +44,10 @@ export class GetAllEmployeelistsComponent implements OnInit {
 
 
       });
+  }
+
+  onPrint() {
+    window.print();
   }
 
 }
