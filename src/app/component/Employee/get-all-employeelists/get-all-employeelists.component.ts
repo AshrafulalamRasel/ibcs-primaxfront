@@ -48,6 +48,7 @@ export class GetAllEmployeelistsComponent implements OnInit {
 
   onPrint() {
     window.print();
+    window.print();
   }
 
 }
